@@ -1,7 +1,10 @@
-#### CLOUDFRONT WITH WAF PROTECTION
-[Author credit: Ben Potter, Security Lead, Well-Architected](https://www.wellarchitectedlabs.com/security/200_labs/200_cloudfront_with_waf_protection/)
+#### CLOUDFRONT WITH WAF PROTECTION 2023
 
-Note: The above tutorial is very old. AWS updated their console, therefore I had to do things a bit differently and also Apache Web Server installation was done differently for Linux 2 instance.
+This lab project is based on tutorial by [Ben Potter, Security Lead, Well-Architected](https://www.wellarchitectedlabs.com/security/200_labs/200_cloudfront_with_waf_protection/)
+
+The tutorial is from 2018. Since then AWS updated the console, therefore I had to create a different flow of instance creation, security groups, roles. Also Apache Web Server installation for Linux 2 instance was done differently. I hope you will enjoy following the updated version. I had a lot of fun :).
+
+#### Lab Level: 200 Intermidediate 
 
 #### Description
 According to Cloud Threat Report, Unit 42™ which is based on analysis of 210,000 cloud accounts across 1,300 different organizations in 76% of organizations MFA is not enforced for console users, and 58% of organizations don't enforce MFA for root/admin users.
