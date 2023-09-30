@@ -44,7 +44,7 @@ Defence in Depth
   ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/d1981ea2-6fb5-4734-a89f-d1797dc33610)
 
 * Network settings (expand)
-* Create security group: cloudfront_with_waf_sec_group (can be done aafter I prefer to be done with it here)
+* Create security group: cloudfront_with_waf_sec_group (can be done after I prefer to be done with it here)
 * Description: sec group for cloudfront with waf
 * Inbound Security Group Rules:
  * Type: SSH Source, Type: My IP
