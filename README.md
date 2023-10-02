@@ -16,7 +16,8 @@ Things I've done differently:
 * Cloudfront roll out
 * 
 
-I hope you will enjoy following the updated version. I had a lot of fun :).
+I hope you will enjoy following my version. I had a lot of fun :).
+
 #### Goals
 Protecting network and host-level boundaries
 System security configuration and maintanance
