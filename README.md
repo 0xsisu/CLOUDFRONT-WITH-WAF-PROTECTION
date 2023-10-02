@@ -143,7 +143,7 @@ How it works:
 
 <img width="2352" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/bdddedf7-5a89-4d0a-8725-f25f178fbdc6">
 
-The above steps set up basic AWS WAF configuration which we gonna use next in CloudFront. The template can be reviewed in the stack Template tab after creation.
+The above steps set up basic AWS WAF configuration which we are going to use next in CloudFront. The template can be reviewed in the stack Template tab after creation.
 
 #### AWS Cloudfront Configuration
 
@@ -164,8 +164,11 @@ Amazon CloudFront is a content delivery network (CDN) service. Read more about i
 <img width="683" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/4779e3a8-d2b4-4cdc-9f33-c74656393fa3">
 
 * Rest leave as DEFAULT
-
 * Click Create Distribution
+
+It will take few minutes to deploy it. Read more about Distribution values [HERE](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html).
+
+<img width="2349" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/c667726a-5656-436e-8ef2-3b298037f8ff">
 
 
 
