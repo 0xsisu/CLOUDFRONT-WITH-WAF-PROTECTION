@@ -46,11 +46,11 @@ Defence in Depth
   ![ec2_launch](https://user-images.githubusercontent.com/78635937/271756002-2afbc686-231b-4a14-8590-edcfedb6a336.png)
 
 
-* Key Pair (login): create new key_pair
+2. Key Pair (login): create new key_pair
 
   ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/d1981ea2-6fb5-4734-a89f-d1797dc33610)
 
-* Network settings (expand)
+3. Network settings (expand)
 * Create security group: cloudfront_with_waf_sec_group (can be done after I prefer to be done with it here)
 * Description: sec group for cloudfront with waf
 * Inbound Security Group Rules:
@@ -69,7 +69,7 @@ Defence in Depth
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/c07900c2-7d10-47ca-ac34-6367152dec72)
 
 
-* Create New Role:
+4. Create New Role:
 
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/cd15bcb5-d1e3-413b-870f-696607faf8af)
 
@@ -79,21 +79,21 @@ Defence in Depth
 
 
 
-* After you create a Role it's time to add it to our instance and click Update:
+5. After you create a Role it's time to add it to our instance and click Update:
 
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/fa1bb0d0-43a6-41da-9092-c12780321771)
 
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/5a05ba4e-9534-416b-acb2-5431d789f908)
 
 
-* Connect to instance via SSH use the pem key created earlier (same directory):
+6. Connect to instance via SSH use the pem key created earlier (same directory):
  
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/6124d9a4-bab8-42cb-9494-823e543e5612)
 
 ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/21fc4d86-4979-4a8f-8a82-b13b91ee2142)
 
 
-* run the following to install Apache Web Server:
+7. Run the following to install Apache Web Server:
 
 > sudo yum update -y
 >
@@ -111,7 +111,7 @@ Defence in Depth
 >
 ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/fda12bc1-f58d-4eac-ab49-e568f02b8190)
 
-* Copy Public IPv4 DNS link and paste it in your browser, you should see the following:
+8. Copy Public IPv4 DNS link and paste it in your browser, you should see the following:
 
 <img width="487" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/e8b46839-d5cd-4477-b935-6d03ca294969">
 
@@ -124,20 +124,20 @@ How it works:
 <img width="1581" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/81de2906-3cfb-47e1-8e36-1ba2c7fa8d7b">
 
 
-* Open CloudFormation console
-* Click Create Stack
-* Use the following template AWS S3 URL: https://s3-us-west-2.amazonaws.com/aws-well-architected-labs/Security/Code/waf-global.yaml
+1. Open CloudFormation console
+2. Click Create Stack
+3. Use the following template AWS S3 URL: https://s3-us-west-2.amazonaws.com/aws-well-architected-labs/Security/Code/waf-global.yaml
 
 <img width="2347" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/e48b6231-0de8-4727-98b9-4eb0243f4ed0">
 
-* Specify stack details:
+4. Specify stack details:
   * Stack Name: waf
   * WAFName: Lab1
   * WAFCloudWatchPrefix: Lab1
   * Rest leave as DEFAULT
   * Review and Complete
 
-* For a few good minutes (aprox 10) the stack will be in status CREATE_IN_PROGRESS till it's done then you'll see CREATE_COMPLETE:
+5. For a few good minutes (aprox 10) the stack will be in status CREATE_IN_PROGRESS till it's done then you'll see CREATE_COMPLETE:
 
 <img width="2349" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/baf490a5-ae3c-4d3a-aca2-66762721d8a5">
 
@@ -149,26 +149,37 @@ The above steps set up basic AWS WAF configuration which we are going to use nex
 
 Amazon CloudFront is a content delivery network (CDN) service. Read more about it [Here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html).
 
-* Open CloudFront console
-* Click Create Distribution
-* In Origin -> Origin Domain use EC2 instance public DNS you've launched earlier:
+1. Open CloudFront console
+2. Click Create Distribution
+3. In Origin -> Origin Domain use EC2 instance public DNS you've launched earlier:
 
 <img width="696" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/6bf818e5-2442-488f-a810-a00e80a7be34">
 
-* In Default cache behaviour -> Cache policy -> Drop down CacheDisabled
+4. In Default cache behaviour -> Cache policy -> Drop down CacheDisabled
 
 <img width="686" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/f30acb21-8a88-49f3-a03c-0be360cd68c1">
 
-* In WAF -> use Existing WAF configuration -> Lab1-WebACL1:
+5. In WAF -> use Existing WAF configuration -> Lab1-WebACL1:
 
 <img width="683" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/4779e3a8-d2b4-4cdc-9f33-c74656393fa3">
 
-* Rest leave as DEFAULT
-* Click Create Distribution
+6. Rest leave as DEFAULT
+7. Click Create Distribution
 
 It will take few minutes to deploy it. Read more about Distribution values [HERE](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html).
 
+<img width="2331" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/dd79d9fc-a198-49cf-886c-a4c48a69d9d5">
+
 <img width="2349" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/c667726a-5656-436e-8ef2-3b298037f8ff">
+
+8. To validate that distribution is deployed use the CloudFront URL, in my case:
+
+<img width="757" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/3276fe8e-b2d5-42fd-b29f-2981610208ec">
+
+For more info on configuring cloudFront read [HERE](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html)
+
+This is how to configure AWS cloudFront with basic AWS WAF.
+
 
 
 
