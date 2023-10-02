@@ -143,11 +143,30 @@ How it works:
 
 <img width="2352" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/bdddedf7-5a89-4d0a-8725-f25f178fbdc6">
 
-The above steps set up basic AWS WAF configuration which we gonna use next in CloudFront.
+The above steps set up basic AWS WAF configuration which we gonna use next in CloudFront. The template can be reviewed in the stack Template tab after creation.
 
-#### Cloudfront
+#### AWS Cloudfront Configuration
 
-Amazon CloudFront is a content delivery network (CDN) service. [Here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) you can learn more about it.
+Amazon CloudFront is a content delivery network (CDN) service. Read more about it [Here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html).
+
+* Open CloudFront console
+* Click Create Distribution
+* In Origin -> Origin Domain use EC2 instance public DNS you've launched earlier:
+
+<img width="696" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/6bf818e5-2442-488f-a810-a00e80a7be34">
+
+* In Default cache behaviour -> Cache policy -> Drop down CacheDisabled
+
+<img width="686" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/f30acb21-8a88-49f3-a03c-0be360cd68c1">
+
+* In WAF -> use Existing WAF configuration -> Lab1-WebACL1:
+
+<img width="683" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/4779e3a8-d2b4-4cdc-9f33-c74656393fa3">
+
+* Rest leave as DEFAULT
+
+* Click Create Distribution
+
 
 
 
