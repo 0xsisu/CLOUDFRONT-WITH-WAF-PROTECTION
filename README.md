@@ -1,15 +1,22 @@
 #### CLOUDFRONT WITH WAF PROTECTION 2023
 
-This lab project is based on tutorial by [Ben Potter, Security Lead, Well-Architected](https://www.wellarchitectedlabs.com/security/200_labs/200_cloudfront_with_waf_protection/)
-
-The tutorial is from 2018. Since then AWS updated the console, therefore I had to create a different flow of instance creation, security groups, roles. Also Apache Web Server installation for Linux 2 instance was done differently. I hope you will enjoy following the updated version. I had a lot of fun :).
-
 #### Lab Level: 200 Intermidediate 
 
 #### Description
 According to Cloud Threat Report, Unit 42™ which is based on analysis of 210,000 cloud accounts across 1,300 different organizations in 76% of organizations MFA is not enforced for console users, and 58% of organizations don't enforce MFA for root/admin users.
-In this lab I wil be demonstrating what I;ve learned from Ben Porter's 200 Level Lab tutorial
 
+This lab is based on [Ben Potter, Security Lead, Well-Architected](https://www.wellarchitectedlabs.com/security/200_labs/200_cloudfront_with_waf_protection/), which is roughly was created in 2018.
+
+Main purpose of my project is to demonstrate what I've learned and how I had to implement changes due to AWS updates for its services.
+ 
+Things I've done differently:
+
+* instance creation/security groups/roles
+* Apache Web Server installation for Linux 2 instance
+* Cloudfront roll out
+* 
+
+I hope you will enjoy following the updated version. I had a lot of fun :).
 #### Goals
 Protecting network and host-level boundaries
 System security configuration and maintanance
@@ -108,6 +115,12 @@ Defence in Depth
 * Copy Public IPv4 DNS link and paste it in your browser, you should see the following:
 
 ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/0e29e433-7edb-4aa9-9481-b3ae5a394924) 
+
+
+#### Cloudfront
+
+Amazon CloudFront is a content delivery network (CDN) service. [Here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) you can learn more about it.
+
 
 
 
