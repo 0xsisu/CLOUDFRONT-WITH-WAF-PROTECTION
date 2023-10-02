@@ -11,11 +11,12 @@ Main purpose of my project is to demonstrate what I've learned and how I had to 
  
 Things I've done differently:
 
-* instance creation/security groups/roles
+* Instance creation/security groups/roles
 * Apache Web Server installation for Linux 2 instance
 * Cloudfront roll out
-* 
-
+* CloudFormation Configuration
+* CloudFront Configuration
+  
 I hope you will enjoy following my version. I had a lot of fun :).
 
 #### Goals
@@ -79,7 +80,6 @@ Defence in Depth
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/a53ff73a-93d6-4dd0-901a-718c19d9c324)
 
 
-
 5. After you create a Role it's time to add it to our instance and click Update:
 
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/fa1bb0d0-43a6-41da-9092-c12780321771)
@@ -126,7 +126,9 @@ How it works:
 
 
 1. Open CloudFormation console
+
 2. Click Create Stack
+
 3. Use the following template AWS S3 URL: https://s3-us-west-2.amazonaws.com/aws-well-architected-labs/Security/Code/waf-global.yaml
 
 <img width="2347" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/e48b6231-0de8-4727-98b9-4eb0243f4ed0">
@@ -165,6 +167,7 @@ Amazon CloudFront is a content delivery network (CDN) service. Read more about i
 <img width="683" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/4779e3a8-d2b4-4cdc-9f33-c74656393fa3">
 
 6. Rest leave as DEFAULT
+ 
 7. Click Create Distribution
 
 It will take few minutes to deploy it. Read more about Distribution values [HERE](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html).
@@ -173,7 +176,9 @@ It will take few minutes to deploy it. Read more about Distribution values [HERE
 
 <img width="2349" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/c667726a-5656-436e-8ef2-3b298037f8ff">
 
+
 8. To validate that distribution is deployed use the CloudFront URL, in my case:
+
 
 <img width="757" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/3276fe8e-b2d5-42fd-b29f-2981610208ec">
 
@@ -181,20 +186,3 @@ For more info on configuring cloudFront read [HERE](https://docs.aws.amazon.com/
 
 This is how to configure AWS cloudFront with basic AWS WAF.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
