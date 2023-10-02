@@ -113,7 +113,7 @@ Defence in Depth
 
 * Copy Public IPv4 DNS link and paste it in your browser, you should see the following:
 
-<img width="497" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/18219e48-c7ba-452f-9933-da0add4547f6">
+<img width="487" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/e8b46839-d5cd-4477-b935-6d03ca294969">
 
 #### AWS WAF Configuration with CloudFormation
 
