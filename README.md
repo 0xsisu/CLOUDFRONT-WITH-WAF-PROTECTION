@@ -117,8 +117,15 @@ Defence in Depth
 
 #### AWS WAF Configuration with CloudFormation
 
+AWS Cloudformation service speeds up cloud provisioning with infrastructure as code. Read more about [HERE](https://aws.amazon.com/cloudformation/).
+
+How it works:
+
+<img width="1581" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/81de2906-3cfb-47e1-8e36-1ba2c7fa8d7b">
+
+
 * Open CloudFormation console
-* Create Stack
+* Click Create Stack
 * Use the following template AWS S3 URL: https://s3-us-west-2.amazonaws.com/aws-well-architected-labs/Security/Code/waf-global.yaml
 
 <img width="2347" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/e48b6231-0de8-4727-98b9-4eb0243f4ed0">
@@ -134,10 +141,9 @@ Defence in Depth
 
 <img width="2349" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/baf490a5-ae3c-4d3a-aca2-66762721d8a5">
 
-The above steps set up basic AWS WAF configuration which we gonna use next in CloudFront.
-
 <img width="2352" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/bdddedf7-5a89-4d0a-8725-f25f178fbdc6">
 
+The above steps set up basic AWS WAF configuration which we gonna use next in CloudFront.
 
 #### Cloudfront
 
