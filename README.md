@@ -3,7 +3,6 @@
 #### Lab Level: 200 Intermidediate 
 
 #### Description
-According to Cloud Threat Report, Unit 42™ which is based on analysis of 210,000 cloud accounts across 1,300 different organizations in 76% of organizations MFA is not enforced for console users, and 58% of organizations don't enforce MFA for root/admin users.
 
 This lab is based on [Ben Potter, Security Lead, Well-Architected](https://www.wellarchitectedlabs.com/security/200_labs/200_cloudfront_with_waf_protection/), which is roughly was created in 2018.
 
