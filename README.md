@@ -90,7 +90,7 @@ Defence in Depth
  
  ![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/6124d9a4-bab8-42cb-9494-823e543e5612)
 
-<img width="917" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/cf6d4b4b-37c1-4eaf-aafe-8c8a49040bd1">
+![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/21fc4d86-4979-4a8f-8a82-b13b91ee2142)
 
 
 * run the following to install Apache Web Server:
@@ -109,12 +109,34 @@ Defence in Depth
 >
 > sudo vi /var/www/html/index.html
 >
-> <img width="443" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/22125996-cb91-462a-9ef1-82e1d09ece06">
-
+![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/fda12bc1-f58d-4eac-ab49-e568f02b8190)
 
 * Copy Public IPv4 DNS link and paste it in your browser, you should see the following:
 
-![image](https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/0e29e433-7edb-4aa9-9481-b3ae5a394924) 
+<img width="497" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/18219e48-c7ba-452f-9933-da0add4547f6">
+
+#### AWS WAF Configuration with CloudFormation
+
+* Open CloudFormation console
+* Create Stack
+* Use the following template AWS S3 URL: https://s3-us-west-2.amazonaws.com/aws-well-architected-labs/Security/Code/waf-global.yaml
+
+<img width="2347" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/e48b6231-0de8-4727-98b9-4eb0243f4ed0">
+
+* Specify stack details:
+  * Stack Name: waf
+  * WAFName: Lab1
+  * WAFCloudWatchPrefix: Lab1
+  * Rest leave as DEFAULT
+  * Review and Complete
+
+* For a few good minutes (aprox 10) the stack will be in status CREATE_IN_PROGRESS till it's done then you'll see CREATE_COMPLETE:
+
+<img width="2349" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/baf490a5-ae3c-4d3a-aca2-66762721d8a5">
+
+The above steps set up basic AWS WAF configuration which we gonna use next in CloudFront.
+
+<img width="2352" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/bdddedf7-5a89-4d0a-8725-f25f178fbdc6">
 
 
 #### Cloudfront
