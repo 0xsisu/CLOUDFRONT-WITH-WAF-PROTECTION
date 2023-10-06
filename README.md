@@ -181,7 +181,7 @@ It will take few minutes to deploy it. Read more about Distribution values [HERE
 
 <img width="757" alt="image" src="https://github.com/0xsisu/CLOUDFRONT-WITH-WAF-PROTECTION/assets/78635937/3276fe8e-b2d5-42fd-b29f-2981610208ec">
 
-For more info on configuring cloudFront read [HERE](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html)
+For more info on configuring CloudFront read [HERE](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html)
 
-This is how to configure AWS cloudFront with basic AWS WAF.
+This is "How To" configure AWS CloudFront with basic AWS WAF.
 
